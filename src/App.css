@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Full-Container {
+  background: linear-gradient(135deg, #e94949, #ff4f81);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Inner-Container > form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  backdrop-filter: blur(10px);
+}
+.generated-link-container > .generated-link{
+  background-color: white;
+  margin-top: 5px;
+  padding: 5px;
+  width: 350px;
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.first-field, .second-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.first-field > label, .second-field > label ,
+.third-field > label{
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.first-field > select, .second-field > input,
+.third-field > textarea {
+  background-color: white;
+  border: 2px solid #ff4f81;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  padding-left: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.first-field > select:focus, .second-field > input:focus {
+  border-color: red;
+  box-shadow: 0px 0px 10px red;
+}
+
+/* Button Styling */
+button {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* Style for the generated link */
+
+/* Make sure the link itself is also white */
+
+
+/* Style for button group */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Reset button styling */
+.reset-btn {
+  background-color: red;
+  color: white;
+  width: 50%;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reset-btn:hover {
+  background-color: darkred;
+}
+/* Style for the generated link */
+
+
+/* Make sure the link itself is also white */
+
+
+/* Style for button group */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Reset button styling */
+.reset-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reset-btn:hover {
+  background-color: darkred;
+}
+
+/* Copy button styling */
+.copy-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.copy-btn:hover {
+  background-color: red;
+}
+
+.textarea-field > label {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.textarea-field > textarea {
+  background-color: white;
+  border: 2px solid #ff4f81;
+  outline: none;
+  width: 100%;
+  height: 100px; /* Adjust as needed */
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  resize: none; /* Prevent resizing */
+  transition: all 0.3s ease-in-out;
+}
+
+.textarea-field > textarea:focus {
+  border-color: red;
+  box-shadow: 0px 0px 10px red;
+}
+.textarea-field textarea:focus {
+  border-color: red;
+  box-shadow: 0px 0px 10px red;
+}
+
+.char-count {
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: right;
+}
+.generated-link-container > .generated-link {
+  background-color: white;
+  margin-top: 5px;
+  padding: 5px;
+  width: auto; /* Adjust width dynamically */
+  font-size: 14px; /* Reduce font size */
+  padding: 4px 8px; /* Adjust padding */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  word-break: break-word; /* Prevent overflow issues */
+  text-align: center;
+  display: inline-block; /* Prevent it from taking full width */
+}
+.third-field{
+  margin-top: 10px;
+}

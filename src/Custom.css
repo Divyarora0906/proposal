@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom right, #ffb6c1, #ff69b4);
+    overflow: hidden;
+  }
+  
+  /* Envelope Wrapper */
+  .wrapper {
+    height: 400px;
+    width: 350px;
+    background-color: #e63946;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-top: 100px;
+  }
+  
+  /* Envelope Lids */
+  .lid {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-right: 175px solid transparent;
+    border-bottom: 125px solid transparent;
+    border-left: 175px solid transparent;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .lid.one {
+    border-top: 125px solid #ff4d6d;
+    transform: rotateX(0deg);
+    z-index: 3;
+  }
+  
+  .lid.two {
+    border-top: 125px solid #e63946;
+    transform: rotateX(90deg);
+    z-index: 2;
+  }
+  
+  /* Envelope Opens */
+  .open .lid.one {
+    transform: rotateX(90deg);
+  }
+  
+  .open .lid.two {
+    transform: rotateX(180deg);
+  }
+  
+  /* Envelope Base */
+  .envelope {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 125px solid transparent;
+    border-right: 175px solid #ff6b81;
+    border-bottom: 125px solid #ff6b81;
+    border-left: 175px solid #ff8a9a;
+    z-index: 3;
+    border-radius: 5px;
+  }
+  
+  /* Letter Styling */
+  .letter {
+    position: absolute;
+    top: 0;
+    width: 85%;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 0;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.letter-title {
+    font-size: 27px;
+    font-weight: bold;
+    color: #d63384; /* A cute pink color */
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+
+  /* Move the letter outside when envelope opens */
+  .open .letter {
+    transform: translateY(-150px);
+    transition-delay: 0.3s;
+    z-index: 2;
+
+  }
+  .open .letter:hover{
+    z-index: 4;
+  }
+  
+  /* Letter Text */
+  .letter p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d72638;
+    line-height: 1.5;
+    font-family: 'Dancing Script', cursive;
+    overflow: visible; /* Allow full text display */
+    white-space: normal; /* Allow multi-line text */
+    width: 100%; /* Ensure text takes full width */
+    border-right: none; /* Remove fake cursor */
+    animation: none; /* Remove typing effect */
+}
+
+  
+  /* Falling Emojis */
+  .falling-emoji {
+    position: absolute;
+    font-size: 30px;
+    top: -10%;
+    animation: fall linear infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(110vh);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 400px) {
+    .wrapper {
+      width: 300px;
+      height: 220px;
+    }
+  
+    .lid {
+      border-right: 150px solid transparent;
+      border-left: 150px solid transparent;
+      border-bottom: 110px solid transparent;
+    }
+  
+    .lid.one {
+      border-top: 110px solid #ff4d6d;
+    }
+  
+    .lid.two {
+      border-top: 110px solid #e63946;
+    }
+  
+    .envelope {
+      border-right: 150px solid #ff6b81;
+      border-bottom: 110px solid #ff6b81;
+      border-left: 150px so
+    }  }
